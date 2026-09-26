@@ -21,26 +21,18 @@
 
 ## 🏗️ Multi-Agent Architecture (Track 4)
 
-```
-                                  ┌───────────────────────────────────────────────┐
-                                  │   Master Orchestrator (Antigravity Agent)     │
-                                  │           Interactions API Runtime            │
-                                  └───────┬──────────────┬──────────────┬─────────┘
-                                          │              │              │
-                    ┌─────────────────────┘              │              └─────────────────────┐
-                    ▼                                    ▼                                    ▼
-       ┌─────────────────────────┐         ┌───────────────────────────┐        ┌───────────────────────────┐
-       │   Pandal Curator Agent  │         │   Crowd & Traffic Agent   │        │   Transit Router Agent    │
-       │   Corridor & Theme Match│         │   Temporal Surge Modeling │        │   Multi-Modal Graph (₹/m) │
-       └─────────────────────────┘         └───────────────────────────┘        └───────────────────────────┘
-                    ▲                                    ▲                                    ▲
-                    │                                    │                                    │
-                    └────────────────────────────────────┴────────────────────────────────────┘
-                                                         │
-                                        ┌────────────────┴────────────────┐
-                                        │  Dynamic Replanner (Self-Heal)  │
-                                        │  Interrupt & Bottleneck Repair  │
-                                        └─────────────────────────────────┘
+```mermaid
+graph TD
+    A[Master Orchestrator - Antigravity Agent] -->|1. Filter Candidates| B[Pandal Curator Agent]
+    A -->|2. Compute Surges & Cordons| C[Crowd & Traffic Forecaster Agent]
+    A -->|3. Multi-Modal Graph Optimization| D[Transit Router Agent]
+    
+    B -->|Candidate Cluster| C
+    C -->|Evaluated Wait Times & Police Tiers| D
+    D -->|Optimized Itinerary & Budget| A
+    
+    E[Dynamic Self-Healing Replanner] -->|Intercepts Real-Time Interrupts| A
+    A -->|State Vector Repair| E
 ```
 
 ---
@@ -77,15 +69,10 @@
 
 ## 🚀 Quickstart & Running Locally
 
-### Prerequisites
-- Node.js (v18+)
-- npm (v9+)
-
-### Installation
 ```bash
 # Clone repository
-git clone <YOUR_REPO_URL>
-cd deepmind
+git clone https://github.com/Shreyashi36/Deepmind-pujjo-hopper.git
+cd Deepmind-pujjo-hopper
 
 # Install dependencies
 npm install
@@ -95,20 +82,6 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
-
-## 📊 Dataset Preview (`data/kolkata_durga_puja_2026.csv`)
-
-| Pandal Name | Zone | Nearest Metro | Walk Min | Theme Category | Rating | Base Wait |
-| :--- | :--- | :--- | :---: | :--- | :---: | :---: |
-| **Ekdalia Evergreen Club** | South Kolkata | Kalighat | 18 | Grand Lighting & Architecture | 4.9★ | 45 min |
-| **Singhi Park Sarbojanin** | South Kolkata | Kalighat | 14 | Contemporary Art | 4.8★ | 35 min |
-| **Sreebhumi Sporting Club** | North/East Kolkata | Dum Dum | 22 | Grand Lighting & Architecture | 5.0★ | 90 min |
-| **Bagbazar Sarbojanin** | North Kolkata | Shyambazar | 8 | Heritage & Traditional | 4.9★ | 40 min |
-| **College Square** | Central Kolkata | MG Road | 5 | Grand Lighting & Architecture | 4.9★ | 50 min |
-| **Suruchi Sangha** | South Kolkata | Rabindra Sarobar | 12 | Social Theme | 4.9★ | 60 min |
-| *(+373 more pandals)* | ... | ... | ... | ... | ... | ... |
 
 ---
 
