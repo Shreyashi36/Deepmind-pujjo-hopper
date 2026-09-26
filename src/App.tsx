@@ -489,17 +489,23 @@ export const App: React.FC = () => {
               </div>
             )}
 
-            {activeTab === 'itinerary' && activePlan && (
-              <div className="h-full">
-                <ItineraryCard
-                  plan={activePlan}
-                  onSelectPandal={p => setSelectedPandal(p)}
-                />
+            {activeTab === 'itinerary' && (
+              <div className="h-full min-h-[680px] flex flex-col">
+                {activePlan ? (
+                  <ItineraryCard
+                    plan={activePlan}
+                    onSelectPandal={p => setSelectedPandal(p)}
+                  />
+                ) : (
+                  <div className="h-full min-h-[500px] bg-slate-950/80 rounded-2xl border border-slate-800 flex items-center justify-center p-8 text-center text-slate-400">
+                    Please generate a route first to view the full hopping schedule.
+                  </div>
+                )}
               </div>
             )}
 
             {activeTab === 'agents' && (
-              <div className="h-full min-h-[480px]">
+              <div className="h-full min-h-[680px] flex flex-col">
                 <AgentVisualizer
                   logs={agentLogs}
                   isProcessing={isProcessing}

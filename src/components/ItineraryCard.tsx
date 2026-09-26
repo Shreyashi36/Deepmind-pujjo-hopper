@@ -119,7 +119,7 @@ export const ItineraryCard: React.FC<ItineraryCardProps> = ({ plan, onSelectPand
       </div>
 
       {/* Timeline of Stops */}
-      <div className="flex-1 p-4 overflow-y-auto space-y-3.5 max-h-[440px]">
+      <div className="flex-1 p-4 overflow-y-auto space-y-3.5">
         {/* Origin Step */}
         <div className="flex items-start gap-3 text-xs">
           <div className="flex flex-col items-center">
@@ -189,7 +189,7 @@ export const ItineraryCard: React.FC<ItineraryCardProps> = ({ plan, onSelectPand
 
                     <div className="flex items-center gap-3 text-slate-400 text-[11px] mt-1">
                       <span>🕒 Arrival: <b className="text-slate-200">{stop.arrivalTime}</b></span>
-                      <span>⏳ Queue: <b className="text-amber-300">~{stop.estimatedQueueMinutes}m</b></span>
+                      <span>⏳ Queue: <b className="text-amber-300">{stop.estimatedQueueMinutes} mins</b></span>
                       <span>👀 Stay: <b>{stop.viewingMinutes}m</b></span>
                     </div>
                   </div>

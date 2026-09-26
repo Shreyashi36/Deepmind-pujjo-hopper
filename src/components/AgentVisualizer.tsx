@@ -83,7 +83,7 @@ export const AgentVisualizer: React.FC<AgentVisualizerProps> = ({ logs, isProces
       </div>
 
       {/* Log Feed */}
-      <div ref={scrollRef} className="flex-1 p-3 overflow-y-auto space-y-2.5 font-mono text-xs max-h-[320px]">
+      <div ref={scrollRef} className="flex-1 p-3 overflow-y-auto space-y-2.5 font-mono text-xs">
         {logs.length === 0 ? (
           <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-500">
             <Bot className="w-8 h-8 mb-2 text-slate-600 opacity-60" />
