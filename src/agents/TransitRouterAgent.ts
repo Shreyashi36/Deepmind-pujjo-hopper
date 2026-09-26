@@ -264,6 +264,8 @@ export class TransitRouterAgent {
 
     const endTime = this.addMinutesToTime(currentTime, finalTransitMinutes);
 
+    const [startH, startM] = prefs.startTime.split(':').map(Number);
+    const [endH, endM] = endTime.split(':').map(Number);
     let totalDurationMinutes = (endH * 60 + endM) - (startH * 60 + startM);
     if (totalDurationMinutes <= 0) {
       totalDurationMinutes += 24 * 60;

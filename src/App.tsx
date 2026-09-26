@@ -135,42 +135,50 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#030712] text-slate-100 flex flex-col selection:bg-amber-500 selection:text-black">
       {/* Top Navigation Bar */}
-      <header className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-amber-500/20 px-4 lg:px-8 py-3 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-xl border-b border-amber-500/30 px-4 lg:px-8 py-3 flex items-center justify-between shadow-2xl">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 via-amber-500 to-yellow-400 p-0.5 shadow-lg shadow-red-600/30">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 via-amber-500 to-yellow-400 p-0.5 shadow-lg shadow-amber-500/30 animate-pulse">
             <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-xl">
               🪔
             </div>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-amber-200 via-amber-400 to-red-400 bg-clip-text text-transparent">
+              <h1 className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-amber-200 via-yellow-400 to-rose-400 bg-clip-text text-transparent">
                 PujoPath AI
               </h1>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                 Track 4: Autonomous Orchestration
+              </span>
+              <span className="text-[10px] font-mono text-slate-500 hidden md:inline">
+                SESSION: DP_2026_FLOW
               </span>
             </div>
             <p className="text-[11px] text-slate-400 hidden sm:block">
-              Multi-Agent Durga Puja Transit & Crowd Router • Google AI Stack
+              Agentic Durga Puja Pandal Hopping & Real-Time Navigation System • Google DeepMind Stack
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-xs text-emerald-300 font-mono">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>LIVE | KOLKATA METRO & POLICE CROWD MATRIX</span>
+          </div>
+
           <a
-            href="https://www.kaggle.com/competitions/google-deep-mind-hyderabad-hackathon"
+            href="https://github.com/Shreyashi36/Deepmind-pujjo-hopper"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-300 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-amber-500/30 text-xs font-semibold text-amber-200 transition-colors shadow-lg"
           >
-            <FileText className="w-3.5 h-3.5 text-amber-400" />
-            <span className="hidden md:inline">Kaggle Hackathon</span>
+            <span>GitHub Code</span>
+            <ExternalLink className="w-3.5 h-3.5" />
           </a>
 
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs text-purple-300 font-mono">
-            <Cpu className="w-3.5 h-3.5 text-purple-400" />
-            <span>Antigravity Agent (Preview)</span>
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-purple-950/60 border border-purple-500/40 text-xs text-purple-300 font-mono shadow-[0_0_12px_rgba(168,85,247,0.3)]">
+            <Cpu className="w-3.5 h-3.5 text-purple-400 animate-pulse" />
+            <span className="hidden sm:inline">Antigravity Agent</span>
           </div>
         </div>
       </header>
