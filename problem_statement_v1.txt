@@ -1,0 +1,8 @@
+I want to build a system, which has a huge demand. so in durga puja in kolkata, there are hundreads of pandals,
+and there are millions of people who visit these pandals. i want to build a system which tells the user to find the most optimized way 
+to visit these places. 
+Like the most optimized graph algorithm of fastest, and the local transport wise, the cheapest, and the most convenient, way to
+find the route. 
+
+the only thing I want the user to enter is basically the starting point and the ending point, and which day they are planning like - is it dritiya, tritiya,
+choturthi,or ponchomi, and the google maps integrates the traffic, and gives the most optimized route.

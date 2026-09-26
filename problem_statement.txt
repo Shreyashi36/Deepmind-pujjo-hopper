@@ -1,0 +1,164 @@
+Skip to
+content
+
+
+Create
+Home
+
+Competitions
+
+Benchmarks
+
+Game Arena
+
+Data Hub
+
+More
+
+Your Work
+
+Viewed
+
+
+Google DeepMind Hyderabad Hackathon
+
+
+View Active Events
+
+Search
+
+Nilay Chauhan · Community Hackathon · 3 hours to go
+Google DeepMind Hyderabad Hackathon
+Build the Future with Gemini
+
+
+Google DeepMind Hyderabad Hackathon
+
+Join Hackathon
+Overview
+Welcome to the official Kaggle page for the Google DeepMind Hyderabad Hackathon, hosted in collaboration with GDG Hyderabad!
+
+Get ready to push the boundaries of AI during an intensive, in-person day of rapid prototyping, problem-solving, and innovation at alt.f coworking Begumpet on September 26, 2026.
+
+Start
+
+2 hours ago
+Close
+
+3 hours to go
+Description
+You are required to build for one of our five hackathon problem statements! We want to see something that's never been built before utilizing the latest from the Google AI Stack:
+
+Gemini 3.8 Flash (gemini-3.8-flash)
+Gemini Audio
+Gemini 3.8 Live (gemini-3.8-live)
+Gemini 3.8 Flash TTS (gemini-3.8-flash-tts)
+Gemini 3.5 Transcribe (gemini-3.5-transcribe)
+Gemini 3.5 Live Translate (gemini-3.5-live-translate-preview)
+GenMedia
+Gemini Omni Flash (gemini-omni-1.1-flash)
+Nano Banana 2 Lite (gemini-3.1-flash-lite-image)
+Lyria 3.5 (lyria-3.5)
+Antigravity Agent (antigravity-preview-09-2026) via the Interactions API
+Gemma 4 (E2B & E4B)
+Problem Statement 1: Frontier Intelligence at Flash Speed
+Focus: Gemini 3.8 Flash (gemini-3.8-flash)
+
+The Challenge: Gemini 3.8 Flash delivers frontier reasoning, coding, and multimodal understanding at Flash speed and cost, along with native tool use and optional Computer Use. Build reactive applications where the model thinks, verifies, and acts continuously in the background as the user works, rather than waiting for them to hit "Submit."
+
+The Bar: Skip standard prompt-and-response chatbots. Show us real-time workspaces, parallelized analysis engines, or live screen/UI workflows where high-speed reasoning is load-bearing.
+
+Problem Statement 2: Next-Gen Voice & Real-Time Audio
+Focus: Gemini 3.8 Live, Gemini 3.8 Flash TTS, Gemini 3.5 Live Translate (gemini-3.5-live-translate-preview), and Gemini 3.5 Transcribe
+The Challenge: Move past rigid "wait, transcribe, respond" voice wrappers. Use our audio stack to build voice-first experiences that handle mid-sentence interruptions, read vocal tone, translate across languages in real time, and turn messy multi-speaker audio into structured action.
+The Bar: Build around audio as the primary medium. If your app works just as well typed into a chatbox or feels like a slow walkie-talkie, you aren't pushing the stack.
+Problem Statement 3: Multimodal Creative Pipelines with GenMedia
+Focus: Nano Banana 2 Lite (gemini-3.1-flash-lite-image), Gemini Omni Flash (gemini-omni-1.1-flash), and Lyria 3.5 (lyria-3.5)
+The Challenge: NB2 Lite generates 1K images in under 2 seconds, Omni lets you generate and conversationally edit video with real-world physics, and Lyria scores custom audio. Build high-velocity creative tools, localized ad engines, or interactive canvases where visual, video, and audio generation work in a single loop.
+The Bar: A prompt box that spits out one image or clip won't cut it. We want to see chained, high-throughput pipelines (like NB2 Lite for rapid asset or storyboard generation, feeding into Omni for multi-turn conversational video editing, and Lyria for adaptive soundtracks) where speed and cross-modal continuity are load-bearing to the experience.
+Problem Statement 4: Autonomous Orchestration with Managed Agents
+Focus: Antigravity Agent (antigravity-preview-09-2026) via the Interactions API
+The Challenge: Single-prompt wrappers break when a task takes twenty steps, spans multiple systems, or hits an error halfway through. Use the Interactions API and Antigravity managed agents to build stateful, multi-agent systems that plan, delegate, track state over long horizons, and recover when a step fails.
+The Bar: We want genuine multi-agent collaboration and tool use, not three prompts glued together with if/else statements.
+Problem Statement 5: Best Use of Gemma 4 (Local-First Agents)
+Focus: Gemma On-Device (Gemma 4 E2B & E4B)
+The Challenge: Moving a single-turn chatbot from the cloud to a phone isn't autonomy. Build a full sense-decide-act-check agent loop running 100% offline on Gemma 4, built for spotty connectivity or high-privacy tasks in healthcare, finance, and personal data.
+The Bar: If your agent is a single straight arrow from input to output, it isn't an agent. Show us local state management, offline error recovery, and clear boundaries for human handoff.
+Submission Requirements
+A valid submission must contain the following:
+
+Kaggle Writeup
+Attached Public Code Repository
+Attached Live Demo
+Your final submission must be made prior to the deadline. Any un-submitted or draft Writeups by the hackathon deadline will not be considered by the Judges.
+
+To create a new Writeup, click on the "New Writeup" button here. After you have saved your Writeup, you should see a "Submit" button in the top right corner. Each team is limited to submitting only a single Writeup, but that same Writeup can be un-submitted, edited, and re-submitted as many times as you'd like before the deadline.
+
+Note: If you attach a private Kaggle Resource to your public Kaggle Writeup, your private Resource will automatically be made public after the deadline.
+
+1. Kaggle Writeup
+The Proof of Work. This report is your technical verification. It must clearly explain the architecture of your project, how you specifically, the challenges you overcame in this hackathon, and why your technical choices were the right ones. Its primary purpose is to prove to the judges that your demo is backed by real engineering and that your solution can serve as a strong foundational asset.
+
+The Kaggle Writeup serves as your project report. This should include a title, subtitle, and a detailed analysis of your submission. You must select a Track for your Writeup in order to submit. Your Writeup should not exceed 1,500 words. Submissions over this limit may be subject to penalty.
+
+The below assets must be attached to the Writeup to be eligible:
+
+Public Code Repository
+The "Source of Truth". Provide a link to a public repository (e.g., GitHub). The code must be well-documented and clearly show the implementation. This is non-negotiable and will be used to validate the authenticity of your project.
+
+Your code repository should be publicly accessible and not require a login or paywall. If you use a private Kaggle Notebook, it will automatically be made public after the deadline.
+
+Provide a link to your public code in the section "Attachments" of your writeup, under "Project Links".
+
+Live Demo
+A URL or files for your working demo (this can be a hosted web app, an interactive terminal recording, or a fully functional Kaggle Notebook). This allows judges to experience your project firsthand. It should be publicly accessible and not require a login or paywall.
+
+If you are providing a link or files, you can do so in the section "Attachments" of your writeup.
+
+Tracks and Awards
+Main Track · $1,000
+
+Grand Prize
+$500
+
+First Runners Up
+$300
+
+Second Runners Up
+$200
+
+Best Use of Gemma 4
+Google AI Credits
+
+Non-monetary
+
+The Full-Stack Award
+Google AI Credits
+
+Non-monetary
+Judges
+Nilay Chauhan
+DevRel, Kaggle
+Citation
+Nilay Chauhan. Google DeepMind Hyderabad Hackathon. https://www.kaggle.com/competitions/google-deep-mind-hyderabad-hackathon, 2026. Kaggle.
+
+
+Cite
+Competition Host
+Nilay Chauhan
+
+Prizes & Awards
+$1,000
+
+Does not award Points or Medals
+
+Participation
+131 Entrants
+
+0 Participants
+
+0 Teams
+
+0 Submissions
+
+Table of Contents
