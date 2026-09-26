@@ -24,36 +24,34 @@ This presents extreme real-world urban mobility challenges:
 
 To satisfy **Problem Statement 4 (Autonomous Orchestration with Managed Agents)**, we built **PujoPath AI**—a stateful multi-agent system where specialized sub-agents collaborate through a Master Orchestrator via the Interactions API to plan, delegate, execute tool calls, monitor execution, and autonomously self-heal upon disruptions.
 
-```mermaid
-graph TD
-    A[Master Orchestrator - Antigravity Agent] -->|1. Filter Candidates| B[Pandal Curator Agent]
-    A -->|2. Compute Surges & Cordons| C[Crowd & Traffic Forecaster Agent]
-    A -->|3. Multi-Modal Graph Optimization| D[Transit Router Agent]
-    
-    B -->|Candidate Cluster| C
-    C -->|Evaluated Wait Times & Police Tiers| D
-    D -->|Optimized Itinerary & Budget| A
-    
-    E[Dynamic Self-Healing Replanner] -->|Intercepts Real-Time Interrupts| A
-    A -->|State Vector Repair| E
-```
+### Multi-Agent Delegation Pipeline
 
-### Specialized Agents & Roles:
+| Agent Name | Role & Responsibility | Core Input & Tooling | Output Artifact |
+| :--- | :--- | :--- | :--- |
+| **1. Master Orchestrator** *(Antigravity Agent)* | Long-horizon state management, task decomposition, inter-agent delegation | User Constraints (Origin, Destination, Day, Themes, VIP Pass) | Execution state vector & final synthesized plan |
+| **2. Pandal Curator Agent** | Spatial corridor clustering & theme semantic matching across 379 pandals | Geo-coordinates bounding box, theme taxonomy, ratings | High-affinity candidate pandals (zero backtrack) |
+| **3. Crowd & Traffic Forecaster** | Temporal crowd surge modeling, police restriction tiering & wait time prediction | Puja Day Tithi multipliers (0.35x - 2.30x), hourly surge curves | Dynamic queue ETAs (mins) & police vehicular advisories |
+| **4. Multi-Modal Transit Router** | Multi-objective graph optimization across Metro, shared auto & walking paths | Metro Blue/Green network matrix, auto routes, pedestrian corridors | Timed step-by-step itinerary, budget (₹), walk stamina (km) |
+| **5. Dynamic Replanner (Self-Healing)** | Real-time interrupt interception & surgical state recovery | Live incident feeds (Police cordons, queue spikes, transit delays) | Rebalanced itinerary with node substitution |
 
-* **1. Master Orchestrator (Antigravity Agent):**  
-  Maintains long-horizon goal state, manages the execution lifecycle, decomposes user goals (Origin, Destination, Puja Day Tithi, Budget, VIP Pass status) into structured sub-tasks, and handles delegation.
+---
 
-* **2. Pandal Curator Agent:**  
-  Scans our comprehensive dataset of **379 landmark pandals** across 10 Kolkata zones. Evaluates corridor bounding boxes and semantic theme vectors (Grand Lighting & Architecture, Contemporary Art, Heritage Daaker Saaj, Social Themes, Bonedi Bari Courtyards) with zero hallucination.
+### Step-by-Step Multi-Agent Execution Flow
 
-* **3. Crowd & Traffic Analyst Forecaster Agent:**  
-  Applies day-specific non-linear multiplier models (Dwitiya 0.35x baseline to Ashtami 2.30x extreme surge) combined with hourly curves and Kolkata Police restriction tiers to output dynamic queue ETAs and safety alerts.
+1. **User Goal Ingestion ➔ Master Orchestrator:**  
+   The user specifies their starting point, ending point, target Puja Day (Dwitiya through Dashami), and transit preference. The Master Orchestrator creates a stateful session.
 
-* **4. Multi-Modal Transit Router Agent:**  
-  Executes a modified 2-Opt TSP heuristic over Kolkata’s multi-modal transit graph (Blue Line Metro, Green Line Metro, 8+ shared auto hubs, and dedicated pedestrian corridors). Optimizes for travel time, footstep stamina, and budget constraints (₹).
+2. **Corridor & Theme Filtering ➔ Pandal Curator Agent:**  
+   Evaluates the 379-pandal dataset and selects the optimal subset aligned with user interests (e.g. Grand Lighting, Contemporary Art, Bonedi Bari) along a progressive forward corridor.
 
-* **5. Dynamic Replanner Agent (Autonomous Self-Healing):**  
-  Monitors live event streams (e.g. simulated police road barricades at VIP Road or queue surges at Chetla Agrani). Rather than rebooting the entire plan, it performs targeted state surgery: replacing cordoned nodes with nearest equivalent theme gems or rerouting transit around metro bottlenecks.
+3. **Temporal Surge & Police Cordon Analysis ➔ Crowd & Traffic Agent:**  
+   Calculates non-linear crowd multipliers for the specific date/time and applies Kolkata Police traffic cordons (pedestrian-only zone conversions).
+
+4. **Multi-Modal Graph Synthesis ➔ Transit Router Agent:**  
+   Computes the optimal transit sequence connecting Metro lines, shared auto stands, and walking routes to minimize total time and expense (₹).
+
+5. **Live Interruption & Autonomous Recovery ➔ Dynamic Replanner:**  
+   When real-time bottlenecks occur (e.g. VIP Road vehicular lockdown or queue surge +50m), the agent intercepts the event, isolates the affected stop, and autonomously heals the route without restarting the session.
 
 ---
 
