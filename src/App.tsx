@@ -455,14 +455,26 @@ export const App: React.FC = () => {
                   />
                 </div>
                 <div className="lg:col-span-4 h-full flex flex-col">
-                  {activePlan ? (
+                  {isProcessing ? (
+                    <div className="h-full min-h-[380px] bg-slate-950/80 backdrop-blur-md rounded-2xl border border-amber-500/30 p-6 flex flex-col items-center justify-center text-center space-y-3 animate-pulse">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-red-600 to-amber-500 p-0.5 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                        <Cpu className="w-6 h-6 text-white animate-spin" />
+                      </div>
+                      <h4 className="font-bold text-sm text-white">Multi-Agent Orchestrator Active</h4>
+                      <p className="text-xs text-amber-200/80 max-w-xs">
+                        Synthesizing crowd forecasts, police cordons & multi-modal metro routes across 379 pandals...
+                      </p>
+                    </div>
+                  ) : activePlan ? (
                     <ItineraryCard
                       plan={activePlan}
                       onSelectPandal={p => setSelectedPandal(p)}
                     />
                   ) : (
-                    <div className="h-full bg-slate-950/80 rounded-2xl border border-slate-800 flex items-center justify-center p-6 text-center text-slate-500">
-                      Click "Generate Autonomous Route" to preview schedule.
+                    <div className="h-full min-h-[380px] bg-slate-950/80 rounded-2xl border border-slate-800 flex flex-col items-center justify-center p-6 text-center text-slate-500 space-y-2">
+                      <Compass className="w-8 h-8 text-amber-500/50" />
+                      <p className="text-xs text-slate-300 font-semibold">Ready to Generate Route</p>
+                      <p className="text-[11px] text-slate-500">Configure your starting point and click the orange "Generate Autonomous Route" button on the left.</p>
                     </div>
                   )}
                 </div>
